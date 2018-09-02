@@ -31,6 +31,11 @@ public class RelationshipManager {
             //System.out.println(arr[0]);
             if(arr[0].equals("add"))
             {
+                if(arr.length<2)
+                {
+                    System.out.println("add command failed. e.g add Gerald OR add Gerald weekly");
+                    continue;
+                }
                 int j;
                 for(j=0;j<100;j++)
                 {
@@ -99,9 +104,12 @@ public class RelationshipManager {
                 for (int j=0;j<100;j++)
                 {
                     if (nameList[j][0]==null)break;
-                    System.out.print(nameList[j][0] + " "+nameList[j][1]+"\n");
+                    int z=j+1;
+                    System.out.print( z+". "+ nameList[j][0] + " "+nameList[j][1]+"\n");
                 }
             }
+
+            else System.out.println("Command error, type again!");
         }
 
     }
